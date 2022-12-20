@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import CityComponent from "./modules/CityComponent";
-// import WeatherComponent from "./modules/WeatherInfoComponent";
+
 
 const Container = styled.div`
 display: flex;
@@ -20,16 +20,6 @@ color:black
 font-size: 18px;
 font-weight: bold;
 `
-
-// const CityComponent = styled.div`
-// display: flex;
-// flex-direction: column;
-// `;
-
-// const WeatherComponent = styled.div`
-// display: flex;
-// flex-direction: column;
-// `;
 
 
 function App() {
