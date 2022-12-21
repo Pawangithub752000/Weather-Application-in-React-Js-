@@ -1,6 +1,6 @@
 import styled from "styled-components";
-// import CityComponent from "./modules/CityComponent";
-import WeatherComponent from './modules/WeatherInfoComponent'
+import CityComponent from "./modules/CityComponent";
+// import WeatherComponent from './modules/WeatherInfoComponent'
 
 
 const Container = styled.div`
@@ -24,11 +24,16 @@ font-weight: bold;
 
 
 function App() {
+const [city, updateCity] = useState();
+const [weather, updateWeather] = useState();
+
+const fetchWeather = () => {};
+
   return (
     <Container>
       <AppLabel>React Weather App</AppLabel>
-      {/* <CityComponent/> */}
-      <WeatherComponent />
+      < CityComponent updateCity={updateCity} fetchWeather={fetchWeather}/>
+      {/* <WeatherComponent /> */}
     </Container>
    );
 }
