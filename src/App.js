@@ -1,5 +1,6 @@
-import styled from "styled-components"
-import CityComponent from "./modules/CityComponent";
+import styled from "styled-components";
+// import CityComponent from "./modules/CityComponent";
+import WeatherComponent from './modules/WeatherInfoComponent'
 
 
 const Container = styled.div`
@@ -26,7 +27,8 @@ function App() {
   return (
     <Container>
       <AppLabel>React Weather App</AppLabel>
-      <CityComponent/>
+      {/* <CityComponent/> */}
+      <WeatherComponent />
     </Container>
    );
 }
