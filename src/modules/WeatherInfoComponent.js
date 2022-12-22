@@ -1,13 +1,19 @@
 import React from "react";
 import styled from "styled-components";
-import {WeatherIcons} from "../App";
+// import {WeatherIcons} from "../App";
+
+import Image1 from "./icons/temp.svg"
+import Image2 from "./icons/temp.svg"
+import Image3 from "./icons/humidity.svg"
+import Image4 from "./icons/wind.svg"
+import Image5 from "./icons/pressure.svg"
 
 export const WeatherInfoIcons = {
-    sunset: "/icons/temp.svg",
-    sunrise: "/icons/temp.svg",
-    humidity: "/icons/humidity.svg",
-    wind: "/icons/wind.svg",
-    pressure: "/icons/pressure.svg",
+    sunset: Image1,
+    sunrise: Image2,
+    humidity: Image3,
+    wind: Image4,
+    pressure: Image5,
 };
 const Location = styled.span`
   margin: 15px auto;
@@ -100,7 +106,7 @@ const WeatherComponent = (props) => {
                     <span>{`${Math.floor(weather?.main?.temp - 273)}°C`}</span>
                     {`  |  ${weather?.weather[0].description}`}
                 </Condition>
-                <WeatherIcon src={WeatherIcons[weather?.weather[0].icon]}/>
+                <WeatherIcon src={Image1}/>
             </WeatherContainer>
             <Location>{`${weather?.name}, ${weather?.sys?.country}`}</Location>
 
@@ -111,6 +117,7 @@ const WeatherComponent = (props) => {
                 <WeatherInfoComponent name={"humidity"} value={weather?.main?.humidity}/>
                 <WeatherInfoComponent name={"wind"} value={weather?.wind?.speed}/>
                 <WeatherInfoComponent name={"pressure"} value={weather?.main?.pressure}/>
+                
             </WeatherInfoContainer>
         </>
     );
